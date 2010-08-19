@@ -1,0 +1,2 @@
+class PadariaController < ApplicationController
+end

@@ -1,0 +1,35 @@
+class PadariasController < ApplicationController
+	def index
+		@padarias = Padaria.find(:all, :order => "nome")
+	end
+	def show
+		@padaria = Padaria.find(params[:id])
+	end
+	def new
+		@padaria = Padaria.new
+	end
+	def create
+		@padaria = Padaria.new(params[:padaria])
+		if @padaria.save
+			redirect_to(:action => "show", id => @padaria)
+		else
+			render :action => "new"
+		end
+	end
+	def edit
+		@padaria = Padaria.find(params[:id])
+	end
+	def update
+		@padaria = Padaria.find(params[:id])
+		if @padaria.update_attributes(params[:padaria])
+			redirect_to(:action => "show", :id => @padaria)
+		else
+			render :action => "edit"
+		end
+	end
+	def destroy
+		@padaria = Padaria.find(params[:id])
+		@padaria.destroy
+		redirect_to(:action => "index")
+	end
+end

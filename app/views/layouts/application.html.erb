@@ -1,0 +1,12 @@
+<html>
+	<head>	
+		<title>Programa de Qualificação de Restaurantes</title>
+		<%= stylesheet_link_tag 'sccafold' %>
+		<%= javascript_include_tag :all %>
+	</head>
+	<body>
+		<%= menu_principal %>		
+		<p style="color": green"><%= flash[:notice] %> </p>
+		<%= yield %>
+	</body>
+</html>

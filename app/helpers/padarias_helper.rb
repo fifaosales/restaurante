@@ -1,0 +1,2 @@
+module PadariasHelper
+end

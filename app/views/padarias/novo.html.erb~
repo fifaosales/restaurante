@@ -1,0 +1,9 @@
+<form action="padarias/gravar">
+	Nome:
+	<input type="text" name="Padaria[nome]">
+	Endereco:
+	<input type="text" name="Padaria[endereco]">
+	Especialidade:
+	<input type="text" name="Padaria[especialidade]">
+	<submitype="submit" name="submit"/>
+</form>
